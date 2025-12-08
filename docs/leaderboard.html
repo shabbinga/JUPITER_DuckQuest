@@ -2,66 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DuckQuest @ JUPITER — Leaderboard</title>
+  <title>Leaderboard Entry</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f4f9;
-      margin: 0;
       padding: 2rem;
     }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    table {
-      width: 60%;
-      margin: 2rem auto;
-      border-collapse: collapse;
+    form {
+      max-width: 400px;
+      margin: auto;
       background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    th, td {
-      padding: 0.75rem 1rem;
-      border: 1px solid #ddd;
-      text-align: center;
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
     }
-    th {
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      width: 100%;
       background: #007acc;
       color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
     }
-    tr:nth-child(even) {
-      background: #f9f9f9;
+    button:hover {
+      background: #005fa3;
     }
   </style>
 </head>
 <body>
-  <h1>DuckQuest @ JUPITER — Leaderboard</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Nora</td>
-        <td>02:15</td>
-      </tr>
-      <tr>
-        <td>Luca</td>
-        <td>02:30</td>
-      </tr>
-      <tr>
-        <td>Mira</td>
-        <td>03:05</td>
-      </tr>
-      <tr>
-        <td>Kai</td>
-        <td>03:20</td>
-      </tr>
-    </tbody>
-  </table>
+  <h1>DuckQuest @ JUPITER — Highscore Eintrag</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Dein Name" required>
+
+    <label for="time">Zeit:</label>
+    <input type="text" id="time" name="time" readonly>
+
+    <button type="submit">Absenden</button>
+  </form>
+
+  <script>
+    // Zeit aus URL-Parameter übernehmen
+    const params = new URLSearchParams(window.location.search);
+    const time = params.get("time");
+    if (time) {
+      document.getElementById("time").value = time;
+    }
+  </script>
 </body>
 </html>
