@@ -2,7 +2,7 @@
 
 Dieses Repository dient ausschließlich als Hosting- und Linkquelle für die **JUPITER-VirtualTour DuckQuest**.
 
-🌐 **Zur Tour:** [go.fzj.de/jupiter-virtualtour](https://shabbinga.github.io/JUPITER_DuckQuest/)
+🌐 **Zur Tour:** [https://shabbinga.github.io/JUPITER_DuckQuest](https://shabbinga.github.io/JUPITER_DuckQuest/)
 
 ## Zweck
 
